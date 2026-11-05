@@ -86,10 +86,106 @@ h1 {
 }
 
 .recipe-card {
+  display: block;
+  text-decoration: none;
   height: 100%;
   padding: 1.35rem;
   border: 1px solid #cfc0ae;
   background: #fffbf3;
+}
+
+.recipe-card:hover {
+  border-color: #802f23;
+  background: #fff3dc;
+}
+
+.recipe-search {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 32rem;
+}
+
+.recipe-search label {
+  font-weight: 650;
+}
+
+.recipe-search input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem;
+  border: 1px solid #802f23;
+  border-radius: 0;
+  background: #fffbf3;
+  color: inherit;
+  font: inherit;
+  caret-color: #802f23;
+}
+
+.recipe-search input::placeholder {
+  color: #65564b;
+}
+
+.recipe-search input:focus-visible {
+  outline: 2px solid #802f23;
+  outline-offset: 3px;
+}
+
+.search-results {
+  margin-block: 1rem;
+  line-height: 1.55;
+}
+
+.recipe-detail {
+  padding-block: 2rem 4rem;
+}
+
+.recipe-heading {
+  max-width: 50rem;
+  margin-block: 2.5rem;
+}
+
+.recipe-heading h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.recipe-heading > p:last-child {
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.recipe-instructions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 2rem 4rem;
+  border-top: 1px solid #cfc0ae;
+  padding-top: 2rem;
+}
+
+.recipe-instructions h2 {
+  font-size: 1.75rem;
+}
+
+.recipe-instructions ul, .recipe-instructions ol {
+  padding-left: 1.5rem;
+  line-height: 1.7;
+}
+
+.recipe-instructions li + li {
+  margin-top: 0.75rem;
+}
+
+::selection {
+  background: #802f23;
+  color: #fff3dc;
+}
+
+@media (max-width: 40rem) {
+  .recipe-instructions {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .recipe-meta {
