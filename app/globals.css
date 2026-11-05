@@ -182,6 +182,49 @@ h1 {
   color: #fff3dc;
 }
 
+.state-screen {
+  padding-block: clamp(3rem, 10vw, 7rem);
+}
+
+.state-screen h1 {
+  max-width: 18ch;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.state-screen p {
+  max-width: 55ch;
+  margin-block: 1.5rem;
+  line-height: 1.6;
+}
+
+.recovery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.recovery-action {
+  display: inline-block;
+  padding: 0.8rem 1.25rem;
+  border: 1px solid #802f23;
+  background: #802f23;
+  color: #fff3dc;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.recovery-action:hover {
+  background: #612218;
+}
+
+.recovery-action:focus-visible {
+  outline: 2px solid #802f23;
+  outline-offset: 4px;
+}
+
 @media (max-width: 40rem) {
   .recipe-instructions {
     grid-template-columns: minmax(0, 1fr);
